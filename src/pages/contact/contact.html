@@ -7,11 +7,11 @@
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <ion-list-header>Follow us on Twitter</ion-list-header>
-    <ion-item>
+  <ion-list inset>
+    <ion-list-header>News Sources</ion-list-header>
+    <ion-item *ngFor="let item of myData">
       <ion-icon name="ionic" item-left></ion-icon>
-      @ionicframework
+      {{item.category}}
     </ion-item>
   </ion-list>
 </ion-content>
