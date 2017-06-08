@@ -1,0 +1,16 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            {{sourceName}}
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-list inset>
+        <ion-list-header>News Articles by {{sourceName}}</ion-list-header>
+        <ion-item *ngFor="let item of myData">
+            {{item.title}}
+        </ion-item>
+    </ion-list>
+</ion-content>

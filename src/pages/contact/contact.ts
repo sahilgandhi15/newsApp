@@ -1,3 +1,4 @@
+import { ArticlesPage } from './../articles/articles';
 import { NewsService } from './../../app/_shared/newsService.service';
 import { Component, OnInit } from '@angular/core';
 import { NavController } from 'ionic-angular';
@@ -8,6 +9,8 @@ import { NavController } from 'ionic-angular';
 })
 export class ContactPage implements OnInit {
   myData: any;
+  pushPage = ArticlesPage;
+  params = {};
   constructor(public navCtrl: NavController, private newsService: NewsService) {
 
   }
@@ -25,4 +28,7 @@ export class ContactPage implements OnInit {
       })
   }
 
+  getArticles(source: any,sourceName:any) {
+    this.navCtrl.push(ArticlesPage, { mySource: source,mySourceName:sourceName });
+  }
 }

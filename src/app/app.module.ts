@@ -1,3 +1,4 @@
+import { ArticlesPage } from './../pages/articles/articles';
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
@@ -19,7 +20,8 @@ import { HttpModule } from "@angular/http";
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    ArticlesPage
   ],
   imports: [
     BrowserModule,
@@ -32,7 +34,8 @@ import { HttpModule } from "@angular/http";
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    ArticlesPage
   ],
   providers: [
     StatusBar,

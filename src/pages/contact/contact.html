@@ -1,7 +1,7 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Contact
+      News Sources
     </ion-title>
   </ion-navbar>
 </ion-header>
@@ -9,9 +9,6 @@
 <ion-content>
   <ion-list inset>
     <ion-list-header>News Sources</ion-list-header>
-    <ion-item *ngFor="let item of myData">
-      <ion-icon name="ionic" item-left></ion-icon>
-      {{item.category}}
-    </ion-item>
+    <button ion-item *ngFor="let item of myData" (click)="getArticles(item.id, item.name)">{{item.name}}</button>
   </ion-list>
 </ion-content>
